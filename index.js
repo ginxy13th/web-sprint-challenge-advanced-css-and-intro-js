@@ -234,11 +234,17 @@ console.log(getArtistByIndex(artists, 0));
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
+// function get20s(array){
+    
+//    array.years.split(' - ')
+// for(let i = 0; i < array.length; i++){
+//   if (array.years[1] < 2001 && array.years[0] > 1899){
+//     return array;
+//   }
+// }
 
-  /* Code here */
-
-}
+// }
+// console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -251,12 +257,12 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, index) {
+    array.shift();
+  return array.length
   }
   
-  /**
-
+console.log(removeArtist(artists, 0));
 
 
 
@@ -272,12 +278,12 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(array, id, name, years, genre, nationality, bio){
+    array.push({id, name, years, genre, nationality, bio});
+    
+    return array
   }
-
+console.log(addArtist(artists, 33, "Elizabeth Bailey", "1987-2020", "Web Design", "American", "I have no idea how to do split. I never want to do a mortgage calculator again in my entire life."));
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
