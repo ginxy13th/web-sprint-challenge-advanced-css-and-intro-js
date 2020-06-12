@@ -214,7 +214,7 @@ console.log(artists[2].bio);
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 function changeName(arr, index, name){
   arr[index].name = name;
-  return arr
+  return arr;
 }
 console.log(changeName(artists, 8, "Vincent Van Gogh"));
 
@@ -235,15 +235,14 @@ console.log(getArtistByIndex(artists, 0));
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
 function get20s(array){
-    newarr3 = []
+  newarr3 = [];
+  newarr3.push(array[i].years.split(' - '));
 for(let i = 0; i < array.length; i++){
-  newarr3.push(artists[i].years.split('-'));
-  if (newarr3.years[1] < 2001 && newarr3.years[0] > 1899){
-    return newarr3;
-  }console.log(newarr3[1]);
+  if ((newarr3.years[0] > 1899) && (newarr3.years[1] < 2001)){
+    newarr3.push(array[i].name)
+ } 
+}return newarr3[i].name;
 }
-}
-
 console.log(get20s(artists));
 
 
@@ -258,12 +257,15 @@ console.log(get20s(artists));
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-    array.shift();
+    for(let i = 0; i < array.length; i++){
+      if ( array[index]=== index){
+        array.splice(i, 1);
+      }
+    }
   return array.length
   }
   
 console.log(removeArtist(artists, 0));
-
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -293,13 +295,12 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-let filteredarray = []
+ filteredar = [];
 for (let i = 0; i < array.length; i++){
-  filteredarray.push(array[i].name);
-  if (array.pictures > 99){
-    return filteredarray;
+  if (array[i].paintings > 99){
+    filteredar.push(array[i].name);
 }  
-}
+}return filteredar;
 }
 console.log(lotsOfArt(artists));
 
