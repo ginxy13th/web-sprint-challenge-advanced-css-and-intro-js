@@ -256,14 +256,9 @@ console.log(get20s(artists));
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-    for(let i = 0; i < array.length; i++){
-      if ( array[index]=== index){
-        array.splice(i, 1);
-      }
-    }
-  return array.length
-  }
-  
+     array.splice(index, 1);
+     return array.length;
+}
 console.log(removeArtist(artists, 0));
 
 
