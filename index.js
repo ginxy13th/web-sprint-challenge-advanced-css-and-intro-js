@@ -234,17 +234,17 @@ console.log(getArtistByIndex(artists, 0));
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
-// function get20s(array){
-    
-//    array.years.split(' - ')
-// for(let i = 0; i < array.length; i++){
-//   if (array.years[1] < 2001 && array.years[0] > 1899){
-//     return array;
-//   }
-// }
+function get20s(array){
+    newarr3 = []
+for(let i = 0; i < array.length; i++){
+  newarr3.push(artists[i].years.split('-'));
+  if (newarr3.years[1] < 2001 && newarr3.years[0] > 1899){
+    return newarr3;
+  }console.log(newarr3[1]);
+}
+}
 
-// }
-// console.log(get20s(artists));
+console.log(get20s(artists));
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -292,15 +292,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(array){
+let filteredarray = []
+for (let i = 0; i < array.length; i++){
+  filteredarray.push(array[i].name);
+  if (array.pictures > 99){
+    return filteredarray;
+}  
 }
+}
+console.log(lotsOfArt(artists));
 
-
-
-// 🎨🎨 STRETCH 🎨🎨//
+//🎨🎨 STRETCH 🎨🎨//
 
 
 /* STRETCH 1: Programtically console.log HTML element structure.
